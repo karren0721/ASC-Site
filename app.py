@@ -26,6 +26,18 @@ def team():
 def sns():
     return render_template('sns.html')
 
+@app.route('/notices')
+def notices():
+    return render_template('notices.html')
+
+@app.route('/events')
+def events():
+    return render_template('events.html')
+
+@app.route('/gallery')
+def gallery():
+    return render_template('gallery.html')
+
 # 게시판
 posts = []  # 임시 데이터
 

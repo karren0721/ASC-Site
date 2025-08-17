@@ -1,72 +1,165 @@
+/* ========== 공통 세팅 ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 body {
-    font-family: sans-serif;
-    margin: 0;
-    scroll-behavior: smooth;
-    background-color: #f9f9f9;
+  background: #ffffff;
+  color: #111;
+  line-height: 1.8; /* 글자 간격 늘림 */
+  font-size: 16px;
 }
 
-li {
-    margin: 20px 0px;
-}
-
+/* ========== 네비게이션 ========== */
 nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #2c3e50;
-    padding: 10px;
-    z-index: 1000;
+  background: #111;
+  padding: 14px 0;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px; /* 메뉴 간격 넓게 */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  transition: all 0.3s;
+  border-radius: 4px;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  background: #fff;
+  color: #111;
 }
 
+/* ========== 헤더 ========== */
 header {
-    padding: 100px 20px 30px;
-    text-align: center;
-    background-color: #34495e;
-    color: white;
+  background: #f7f7f7;
+  color: #111;
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid #ddd;
 }
 
+header img {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* ========== 메인 컨텐츠 ========== */
 main {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 section {
-    padding: 80px 20px;
-    border-bottom: 1px solid #ddd;
+  margin-bottom: 70px; /* 섹션 사이 여백 */
 }
 
-form input {
-    margin: 5px;
-    padding: 5px;
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  border-left: 6px solid #000;
+  padding-left: 14px;
+  color: #000;
 }
 
-button {
-    padding: 8px 12px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section li {
+  margin-bottom: 25px; /* 글 항목 간격 더 넓힘 */
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* ========== 카드 레이아웃 (팀/소개용) ========== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 25px);
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  padding: 25px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #000;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* ========== details (회칙 페이지 전용) ========== */
+details {
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 15px 0;
+  padding: 15px;
+}
+
+details summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+details[open] {
+  background: #fff;
+  border-color: #000;
+}
+
+/* ========== 푸터 ========== */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.95rem;
+  margin-top: 70px;
+}
+
+/* ========== 반응형 ========== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
 }

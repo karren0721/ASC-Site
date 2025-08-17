@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}소개 | ASC{% endblock %}
+
+{% block content %}
+<section id="gallery">
+  <h2>최근 활동 사진</h2>
+  <div class="gallery-slider">
+    <img src="{{ url_for('static', filename='img/activity1.jpg') }}" alt="활동 사진1">
+    <img src="{{ url_for('static', filename='img/activity2.jpg') }}" alt="활동 사진2">
+    <img src="{{ url_for('static', filename='img/activity3.jpg') }}" alt="활동 사진3">
+  </div>
+</section>
+{% endblock %}
