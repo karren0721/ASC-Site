@@ -172,4 +172,88 @@ footer {
   }
 }
 
+/* 드롭다운 메뉴 스타일 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
 
+nav ul li {
+    position: relative;
+}
+
+nav ul .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+nav ul .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul .dropdown-menu li {
+    width: 100%;
+}
+
+nav ul .dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul .dropdown-menu a:hover {
+    background: #f0f0f0;
+}
+
+#team h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* 공통 사람 박스 */
+.person {
+  text-align: center;
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 12px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  min-width: 150px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.person:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* 레벨별 정렬 */
+.level {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+/* 부원들을 세로로 쌓을 수 있게 */
+.level.members > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
